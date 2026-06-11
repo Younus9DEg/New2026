@@ -1,0 +1,747 @@
+/* styles.css */
+
+:root {
+  /* Dark Theme (Default) */
+  --bg-gradient-start: #2a003f;
+  --bg-gradient-end: #3c0a6c;
+  --text-primary: #f3f3f3;
+  --text-nav-link: #f3f3f3;
+  --text-nav-link-hover: #ff77ff;
+  --bg-navbar: rgba(255, 255, 255, 0.05);
+  --border-heading: #fff;
+  --bg-button: #6100a5;
+  --text-button: #fff;
+  --bg-button-hover: #9400d3;
+  --bg-skill-item: rgba(255, 255, 255, 0.1);
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --border-card-left: #ff77ff;
+  --bg-portfolio-item: rgba(255, 255, 255, 0.05);
+  --bg-footer: rgba(0, 0, 0, 0.2);
+  --text-footer: #f3f3f3;
+  --loader-bg: #fff; /* Assuming loader GIF is dark/transparent on light bg */
+
+  /* Variables for styles potentially from index.html <style> block */
+  --color-navbar-brand: #ff77ff;
+  --color-navbar-link: #f3f3f3;
+  --color-navbar-link-hover: #ff77ff;
+  --bg-navbar-override: rgba(42, 0, 63, 0.95); /* from potential inline style */
+
+  --btn3d-bg-gradient-start: #6a11cb;
+  --btn3d-bg-gradient-end: #2575fc;
+  --btn3d-text-color: #fff;
+  --btn3d-shadow-color: #3c0a6c;
+  --btn3d-shadow-color-rgba: rgba(42,0,63,0.25);
+  --btn3d-active-shadow-color-rgba: rgba(42,0,63,0.18);
+
+  --lang-item-bg-gradient-start: #667eea;
+  --lang-item-bg-gradient-end: #764ba2;
+  --lang-item-text: white;
+  --lang-proficiency-fill: rgba(255,255,255,0.8);
+  --lang-proficiency-bg: rgba(255,255,255,0.3);
+
+  /* Contact Section variables (dark theme adaptations for originally light-designed elements) */
+  --contact-intro-h2-gradient-start: #667eea; /* Keeping original gradient for dark too */
+  --contact-intro-h2-gradient-end: #764ba2;
+  --contact-intro-p: #bbb; /* Lighter for dark bg */
+  --contact-category-bg: rgba(255, 255, 255, 0.08); /* Darker bg for cards */
+  --contact-category-h3: #f0f0f0;
+  --contact-category-icon-bg-gradient-start: #667eea;
+  --contact-category-icon-bg-gradient-end: #764ba2;
+  --contact-category-icon-text: white;
+  --contact-link-text: #ccc;
+  --contact-link-hover-text: #764ba2; /* Accent */
+  --contact-link-icon-bg: rgba(255,255,255,0.1);
+  --contact-link-icon-hover-bg-gradient-start: #667eea; /* Keeping original gradient */
+  --contact-link-icon-hover-bg-gradient-end: #764ba2;
+  --contact-link-icon-hover-text: white;
+  --contact-link-value: #aaa;
+  --map-header-bg-gradient-start: #667eea; /* Keeping original gradient */
+  --map-header-bg-gradient-end: #764ba2;
+  --map-header-text: white;
+}
+
+body.light-mode {
+  /* Light Theme Overrides */
+  --bg-gradient-start: #e0e0e0;
+  --bg-gradient-end: #ffffff;
+  --text-primary: #2c3e50;
+  --text-nav-link: #34495e;
+  --text-nav-link-hover: #5dade2;
+  --bg-navbar: rgba(255, 255, 255, 0.8); /* More opaque for light mode */
+  --border-heading: #bdc3c7;
+  --bg-button: #3498db;
+  --text-button: #ffffff;
+  --bg-button-hover: #2980b9;
+  --bg-skill-item: rgba(224, 226, 228, 0.7); /* Lighter, less transparent */
+  --bg-card: #ffffff; /* Solid white for cards */
+  --border-card-left: #3498db;
+  --bg-portfolio-item: #ffffff; /* Solid white */
+  --bg-footer: #ecf0f1;
+  --text-footer: #7f8c8d;
+  --loader-bg: #ffffff; /* Loader bg for light mode */
+
+  /* Light theme variables for styles potentially from index.html <style> block */
+  --color-navbar-brand: #5dade2;
+  --color-navbar-link: #34495e;
+  --color-navbar-link-hover: #5dade2;
+  --bg-navbar-override: rgba(240, 240, 240, 0.9); /* Lighter navbar bg */
+
+  --btn3d-bg-gradient-start: #79c2ff;
+  --btn3d-bg-gradient-end: #a2facf;
+  --btn3d-text-color: #2c3e50;
+  --btn3d-shadow-color: #888888;
+  --btn3d-shadow-color-rgba: rgba(0,0,0,0.15); /* Lighter shadow for light mode */
+  --btn3d-active-shadow-color-rgba: rgba(0,0,0,0.1);
+
+
+  --lang-item-bg-gradient-start: #89f7fe;
+  --lang-item-bg-gradient-end: #66a6ff;
+  --lang-item-text: #2c3e50;
+  --lang-proficiency-fill: rgba(44, 62, 80, 0.7);
+  --lang-proficiency-bg: rgba(44, 62, 80, 0.2);
+
+  /* Contact Section variables (light theme - closer to original inline styles) */
+  --contact-intro-h2-gradient-start: #5dade2; /* Light theme gradient */
+  --contact-intro-h2-gradient-end: #76c7c0;
+  --contact-intro-p: #666;
+  --contact-category-bg: #fff;
+  --contact-category-h3: #333;
+  --contact-category-icon-bg-gradient-start: #5dade2; /* Light theme gradient */
+  --contact-category-icon-bg-gradient-end: #76c7c0;
+  --contact-category-icon-text: white;
+  --contact-link-text: #555;
+  --contact-link-hover-text: #5dade2; /* Light theme accent */
+  --contact-link-icon-bg: #f8f9fa;
+  --contact-link-icon-hover-bg-gradient-start: #5dade2; /* Light theme gradient */
+  --contact-link-icon-hover-bg-gradient-end: #76c7c0;
+  --contact-link-icon-hover-text: white;
+  --contact-link-value: #888;
+  --map-header-bg-gradient-start: #5dade2; /* Light theme gradient */
+  --map-header-bg-gradient-end: #76c7c0;
+  --map-header-text: white;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  overflow-x: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Custom cursor glow — follows mouse movement */
+body.custom-cursor {
+  cursor: none;
+}
+body.custom-cursor a,
+body.custom-cursor button,
+body.custom-cursor .btn-3d,
+body.custom-cursor .button {
+  cursor: none;
+}
+.site-header,
+nav.navbar,
+main,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+  margin-left: -160px;
+  margin-top: -160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(150, 80, 255, 0.18) 0%, rgba(100, 50, 200, 0.06) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
+}
+body.light-mode .cursor-glow {
+  background: radial-gradient(circle, rgba(93, 173, 226, 0.2) 0%, rgba(118, 199, 192, 0.08) 40%, transparent 70%);
+  mix-blend-mode: multiply;
+}
+.cursor-ring {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  margin-top: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 119, 255, 0.7);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease, border-color 0.2s ease;
+}
+body.light-mode .cursor-ring {
+  border-color: rgba(93, 173, 226, 0.8);
+}
+.cursor-ring--active {
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  margin-top: -14px;
+  border-color: rgba(255, 119, 255, 1);
+  background: rgba(255, 119, 255, 0.15);
+}
+body.light-mode .cursor-ring--active {
+  border-color: rgba(93, 173, 226, 1);
+  background: rgba(93, 173, 226, 0.15);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.custom-cursor {
+    cursor: auto;
+  }
+  .cursor-glow,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* Specific background for light mode if solid color is preferred over gradient */
+body.light-mode {
+   background: var(--bg-gradient-end); /* Or a solid color like #f4f7f9 */
+}
+
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+body.light-mode canvas#bg {
+  opacity: 0.3; /* Make starfield less prominent in light mode */
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-button);
+  color: var(--text-button);
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--text-nav-link-hover);
+  outline-offset: 2px;
+}
+
+/* Site header */
+.site-header,
+header {
+  text-align: center;
+  padding: 5rem 1.5rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.site-header__eyebrow {
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-nav-link-hover) !important;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.site-header h1,
+header h1 {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.site-header__tagline {
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  line-height: 1.65;
+  color: var(--text-primary);
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Generic p, h2, etc. styles should be checked if they were intended to be global or scoped */
+/* For now, assuming this h1 was the main page title in the header */
+
+p { /* General paragraph text */
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  list-style: none;
+  background-color: var(--bg-navbar);
+  backdrop-filter: blur(10px);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-nav-link);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--text-nav-link-hover);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-heading);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.75rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+section ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.6;
+}
+body.light-mode section ul li {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+section ul li:last-child {
+  border-bottom: none;
+}
+
+#about p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.button, .btn-primary { /* Assuming .btn-primary from HTML uses similar styling */
+  background: var(--bg-button);
+  padding: 0.75rem 1.5rem;
+  color: var(--text-button);
+  border: none;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button:hover, .btn-primary:hover {
+  background: var(--bg-button-hover);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.skill {
+  padding: 1rem;
+  background-color: var(--bg-skill-item);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, background-color 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-primary);
+}
+body.light-mode .skill {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  /* backdrop-filter: none; /* Consider removing blur if it's too much on light bg */
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  padding: 1.5rem;
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--border-card-left);
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-primary);
+}
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+.card-meta {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+body.light-mode .card {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-item {
+  background-color: var(--bg-portfolio-item);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  color: var(--text-primary);
+}
+.portfolio-item:hover {
+  transform: translateY(-4px);
+}
+.portfolio-item__title {
+  font-size: 1.1rem;
+  margin: 0.75rem 0 0.5rem;
+  color: var(--text-primary);
+}
+.portfolio-item p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+body.light-mode .portfolio-item {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+body.light-mode .portfolio-item p {
+  color: var(--text-primary);
+}
+
+footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-size: 0.9rem;
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+footer a {
+  color: var(--text-nav-link-hover);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.footer-meta {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loader styles */
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--loader-bg); 
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+/* body.light-mode #loader is handled by the variable already */
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(97, 0, 165, 0.2);
+  border-top-color: #6100a5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+body.light-mode .loader-spinner {
+  border-color: rgba(52, 152, 219, 0.2);
+  border-top-color: #3498db;
+}
+.loader-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6100a5;
+}
+body.light-mode .loader-text {
+  color: #3498db;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+#loader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Styles potentially from index.html <style> block */
+/* These assume that if these styles were in index.html, they are either removed 
+   or these overrides are specific enough. Ideally, move them from index.html to here. */
+
+.navbar { /* This is a Bootstrap class, might be styled inline or in <style> */
+  /* background: var(--bg-navbar-override) !important;  Potentially needed if inline styles are very persistent */
+  /* backdrop-filter: blur(10px); Already in nav ul, but if .navbar has its own bg... */
+}
+.navbar-brand { /* Bootstrap class */
+  font-weight: bold; /* Keep or make variable */
+  color: var(--color-navbar-brand) !important; /* Important to override Bootstrap if needed */
+  letter-spacing: 2px; /* Keep or make variable */
+}
+.navbar-nav .nav-link { /* Bootstrap class */
+  color: var(--color-navbar-link) !important; /* Important to override Bootstrap */
+  font-weight: bold; /* Keep or make variable */
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--color-navbar-link-hover) !important; /* Important to override Bootstrap */
+}
+
+/* For .btn-3d (from index.html) */
+.btn-3d {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: var(--btn3d-text-color);
+    background: linear-gradient(135deg, var(--btn3d-bg-gradient-start) 0%, var(--btn3d-bg-gradient-end) 100%);
+    box-shadow: 0 6px 0 var(--btn3d-shadow-color), 0 8px 20px var(--btn3d-shadow-color-rgba);
+    outline: none;
+}
+.btn-3d:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 var(--btn3d-shadow-color), 0 12px 25px var(--btn3d-shadow-color-rgba);
+}
+.btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--btn3d-shadow-color), 0 4px 10px var(--btn3d-active-shadow-color-rgba);
+}
+
+/* Languages section (from index.html) */
+.language-item {
+    background: linear-gradient(135deg, var(--lang-item-bg-gradient-start) 0%, var(--lang-item-bg-gradient-end) 100%);
+    color: var(--lang-item-text);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.light-mode .language-item {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+.language-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+body.light-mode .language-item:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.language-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+.proficiency-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--lang-proficiency-bg);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.proficiency-fill {
+    height: 100%;
+    background-color: var(--lang-proficiency-fill);
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Contact Section (styles from index.html) */
+#contact .container { /* Assuming a structure like this */
+    /* max-width: 1100px; margin: auto; padding: 0 20px; */
+}
+.contact-intro h2 { /* Specific h2 in contact */
+    background: linear-gradient(90deg, var(--contact-intro-h2-gradient-start), var(--contact-intro-h2-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent; /* Standard property */
+    font-size: 2.8rem; /* from inline */
+    margin-bottom: 1rem; /* from inline */
+}
+.contact-intro p {
+  color: var(--contact-intro-p); /* Uses variable defined above */
+  font-size: 1.1rem; /* from inline */
+  line-height: 1.8; /* from inline */
+  max-width: 700px; /* from inline */
+  margin: 0 auto 2rem auto; /* from inline */
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* from inline */
+}
+.contact-category {
+  background: var(--contact-category-bg);
+  padding: 2rem; /* from inline */
+  border-radius: 10px; /* from inline */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* from inline, might need theme specific var */
+  text-align: center; /* from inline */
+  transition: all 0.3s ease; /* from inline */
+}
+body.light-mode .contact-category {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Original shadow for light mode */
+}
+.contact-category:hover {
+  transform: translateY(-5px); /* from inline */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* from inline, might need theme specific var */
+}
+body.light-mode .contact-category:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Adjusted hover shadow for light */
+}
+.contact-category-icon {
+    width: 70px; /* from inline */
+    height: 70px; /* from inline */
+    border-radius: 50%; /* from inline */
+    background: linear-gradient(135deg, var(--contact-category-icon-bg-gradient-start) 0%, var(--contact-category-icon-bg-gradient-end) 100%);
+    color: var(--contact-category-icon-text);
+    display: flex; /* from inline */
+    align-items: center; /* from inline */
+    justify-content: center; /* from inline */
+    font-size: 2rem; /* from inline */
+    margin: 0 auto 1.5rem auto; /* from inline */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1); /* from inline */
+}
+.contact-category h3 {
+  color: var(--contact-category-h3);
+  font-size: 1.5rem; /* from inline */
+  margin-bottom: 1rem; /* from inline */
+}
+.contact-link {
+  display: block; /* from inline */
+  color: var(--contact-link-text);
+  text-decoration: none; /* from inline */
+  margin-bottom: 0.75rem; /* from inline */
+  transition: color 0.3s ease; /* from inline */
+  font-weight: 500; /* from inline */
+}
+.contact-link:hover {
+  color: var(--contact-link-hover-text);
+}
+.contact-link i { /* Assuming icons are used, e.g. Font Awesome */
+  margin-right: 10px; /* from inline */
+  width: 20px; /* from inline */
+  text-align: center; /* from inline */
+}
+.contact-link-icon { /* This was for a more complex structure in example, simplified here */
+  background: var(--contact-link-icon-bg); /* For if icon itself had a bg */
+}
+.contact-link:hover .contact-link-icon { /* For if icon itself had a bg and hover effect */
+    background: linear-gradient(135deg, var(--contact-link-icon-hover-bg-gradient-start) 0%, var(--contact-link-icon-hover-bg-gradient-end) 100%);
+    color: var(--contact-link-icon-hover-text);
+}
+.contact-link-value { /* If value text needed separate styling */
+  color: var(--contact-link-value);
+  font-style: italic; /* Example */
+}
+.map-container {
+  margin-top: 3rem; /* from inline */
+  border-radius: 10px; /* from inline */
+  overflow: hidden; /* from inline */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* from inline */
+}
+body.light-mode .map-container {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.map-header {
+    background: linear-gradient(90deg, var(--map-header-bg-gradient-start), var(--map-header-bg-gradient-end));
+    color: var(--map-header-text);
+    padding: 1rem 1.5rem; /* from inline */
+    font-size: 1.3rem; /* from inline */
+    font-weight: bold; /* from inline */
+}
+.map-header i {
+    margin-right: 10px; /* from inline */
+}
+#map { /* Google Maps iframe container */
+    width: 100%; /* from inline */
+    height: 450px; /* from inline */
+    border: none; /* from inline */
+}
+
+@keyframes rgb-glow-animation {
+  0% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000; }
+  16% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #ff7f00, 0 0 15px #ff7f00, 0 0 20px #ff7f00; }
+  33% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #ffff00, 0 0 15px #ffff00, 0 0 20px #ffff00; }
+  50% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00; }
+  66% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff; }
+  83% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #4b0082, 0 0 15px #4b0082, 0 0 20px #4b0082; }
+  100% { text-shadow: 1px 1px 0px rgba(0,0,0,0.2), 2px 2px 0px rgba(0,0,0,0.15), 3px 3px 0px rgba(0,0,0,0.1), 0 0 10px #8f00ff, 0 0 15px #8f00ff, 0 0 20px #8f00ff; }
+}
+
